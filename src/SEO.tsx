@@ -20,8 +20,8 @@ export function SEO({ title, description, path = '/', image = '/kidsyu_logo.png'
     url: site.url,
     logo: image,
     sameAs: [
-      'https://www.youtube.com/@kidsyu',
-      'https://www.instagram.com/kidsyu',
+      'https://youtube.com/@igottabubu?si=nozlhVV5c4mQIAuB',
+      'https://www.instagram.com/kidsyuyt/',
     ],
   }
 

@@ -18,12 +18,12 @@ export default function Home() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Button asChild size="lg">
-                  <a href="https://www.youtube.com/@kidsyu" target="_blank" rel="noreferrer" aria-label="Watch Kidsyu on YouTube">
+                  <a href="https://youtube.com/@igottabubu?si=nozlhVV5c4mQIAuB" target="_blank" rel="noreferrer" aria-label="Watch Kidsyu on YouTube">
                     <Youtube className="mr-2 h-5 w-5" /> Watch on YouTube
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="secondary">
-                  <a href="https://www.instagram.com/kidsyu" target="_blank" rel="noreferrer" aria-label="Follow Kidsyu on Instagram">
+                  <a href="https://www.instagram.com/kidsyuyt/" target="_blank" rel="noreferrer" aria-label="Follow Kidsyu on Instagram">
                     <Instagram className="mr-2 h-5 w-5" /> Follow on Instagram
                   </a>
                 </Button>
@@ -71,9 +71,9 @@ export default function Home() {
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold">Watch Everywhere</h2>
               <p className="mt-4 text-card-foreground/80">
                 Our content is free and easy to access. Start watching on
-                <a href="https://www.youtube.com/@kidsyu" target="_blank" rel="noreferrer" className="text-brand underline ml-1">YouTube</a>
+                <a href="https://youtube.com/@igottabubu?si=nozlhVV5c4mQIAuB" target="_blank" rel="noreferrer" className="text-brand underline ml-1">YouTube</a>
                 and
-                <a href="https://www.instagram.com/kidsyu" target="_blank" rel="noreferrer" className="text-brand underline ml-1">Instagram</a>.
+                <a href="https://www.instagram.com/kidsyuyt/" target="_blank" rel="noreferrer" className="text-brand underline ml-1">Instagram</a>.
                 As we grow, Kidsyu will reach more mediums so families can enjoy our shows anywhere.
               </p>
               <ul className="mt-6 grid gap-2 text-card-foreground/80 list-disc pl-5">
@@ -99,8 +99,8 @@ export default function Home() {
           <h3 className="font-display text-2xl sm:text-3xl font-extrabold">Made with care. Designed for joy.</h3>
           <p className="mt-2 text-card-foreground/80">Follow us for new songs, bright stories, and happy learning moments.</p>
           <div className="mt-6 flex justify-center gap-3">
-            <Button asChild size="lg"><a href="https://www.youtube.com/@kidsyu" target="_blank" rel="noreferrer"><Youtube className="mr-2 h-5 w-5"/> Subscribe</a></Button>
-            <Button asChild size="lg" variant="secondary"><a href="https://www.instagram.com/kidsyu" target="_blank" rel="noreferrer"><Instagram className="mr-2 h-5 w-5"/> Follow</a></Button>
+            <Button asChild size="lg"><a href="https://youtube.com/@igottabubu?si=nozlhVV5c4mQIAuB" target="_blank" rel="noreferrer"><Youtube className="mr-2 h-5 w-5"/> Subscribe</a></Button>
+            <Button asChild size="lg" variant="secondary"><a href="https://www.instagram.com/kidsyuyt/" target="_blank" rel="noreferrer"><Instagram className="mr-2 h-5 w-5"/> Follow</a></Button>
           </div>
         </div>
       </section>
