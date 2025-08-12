@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens via CSS variables */
+:root {
+  /* Brand palette (harmonizes with logo: warm amber accent, clean surfaces) */
+  --color-brand: 42 96% 55%; /* amber */
+  --color-brand-foreground: 48 100% 97%;
+
+  --color-bg: 0 0% 100%;
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 222 47% 11%;
+
+  --color-muted: 210 40% 96%;
+  --color-muted-foreground: 215 16% 47%;
+
+  --color-border: 214 32% 91%;
+  --color-ring: 42 96% 55%;
+
+  --radius-lg: 1.25rem;
+  --radius-md: 0.875rem;
+  --radius-sm: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Deep navy background to flatter sky-blue logo; gentle contrast */
+    --color-bg: 220 40% 8%;
+    --color-card: 220 42% 10%;
+    --color-card-foreground: 210 40% 96%;
+    --color-muted: 217 33% 17%;
+    --color-muted-foreground: 215 20% 65%;
+    --color-border: 220 34% 20%;
+  }
+}
+
+html, body, #root { height: 100%; }
+body {
+  @apply bg-bg text-card-foreground antialiased;
+}
+
+/***** Components *****/
+.btn {
+  @apply inline-flex items-center gap-2 rounded-lg px-5 py-3 font-semibold shadow-sm transition-all;
+}
+.btn-primary {
+  @apply bg-brand text-brand-foreground hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+}
+.btn-secondary {
+  @apply bg-muted text-card-foreground hover:bg-muted/80;
+}
+
+/***** Utilities *****/
+.container-px { @apply px-4 sm:px-6 lg:px-8; }
+.max-w-screen-content { max-width: 1200px; }
+
+/* Soft aurora background used in feature art blocks */
+.aurora {
+  background:
+    radial-gradient(1200px 600px at 20% 10%, hsla(204, 94%, 82%, 0.16), transparent 60%),
+    radial-gradient(800px 500px at 80% 0%, hsla(42, 96%, 60%, 0.14), transparent 50%),
+    radial-gradient(700px 500px at 50% 90%, hsla(262, 83%, 70%, 0.10), transparent 60%);
+}
+
+
+
+/* Motion + 3D utilities for hero showcase */
+.perspective-1000 { perspective: 1000px; perspective-origin: 50% 40%; }
+.tilt-card { transform-style: preserve-3d; }
+
+@keyframes float-y {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+.float-slow { animation: float-y 6s ease-in-out infinite; }
+.float-delay-200 { animation-delay: .2s; }
+.float-delay-400 { animation-delay: .4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .float-slow { animation: none; }
+  .tilt-card { transition: none !important; }
+}
+
+
+/* Contact page bespoke utilities */
+.bg-grid-soft {
+  background-image:
+    linear-gradient(to right, hsl(var(--color-muted) / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--color-muted) / 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.neon-panel {
+  position: relative;
+  background: linear-gradient(135deg,
+    hsl(var(--color-brand) / 0.80) 0%,
+    hsla(204, 94%, 82%, 0.50) 45%,
+    hsla(262, 83%, 70%, 0.45) 100%
+  );
+  box-shadow:
+    0 0 0 1px hsl(var(--color-border) / 0.40) inset,
+    0 8px 30px -12px hsla(42, 96%, 55%, 0.25);
+}
+
+.input {
+  @apply w-full rounded-lg border border-border bg-card px-4 py-3 text-card-foreground placeholder:text-muted-foreground/70 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring;
+}
+
+.orb {
+  pointer-events: none;
+  border-radius: 9999px;
+  background:
+    radial-gradient(35% 35% at 30% 30%, hsla(42, 96%, 60%, 0.75), transparent 60%),
+    radial-gradient(45% 45% at 70% 70%, hsla(204, 94%, 82%, 0.55), transparent 60%),
+    radial-gradient(80% 80% at 50% 50%, hsla(262, 83%, 70%, 0.35), transparent 60%);
+  filter: blur(6px);
+  opacity: .65;
+  mix-blend-mode: screen;
+  animation: float-y 6s ease-in-out infinite;
+}
